@@ -15,4 +15,6 @@ WORKDIR /app
 
 COPY dumpDatabase.sh .
 
+RUN chmod 755 dumpDatabase.sh
+
 CMD [ "./dumpDatabase.sh" ]
