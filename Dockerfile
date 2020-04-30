@@ -9,7 +9,7 @@ RUN apk -v --update add \
         postgresql \
         bash \
         curl
-RUN mkdir /app
+RUN mkdir /app /pg_backup
 
 WORKDIR /app
 
