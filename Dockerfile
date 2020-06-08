@@ -16,5 +16,6 @@ WORKDIR /app
 COPY dumpDatabase.sh .
 
 RUN chmod 755 dumpDatabase.sh
+RUN chgrp -R 0 /app /pg_backup && chmod -R g=u /app /pg_backup
 
 CMD [ "./dumpDatabase.sh" ]
